@@ -9,7 +9,7 @@ export const globalStyles: SxProps = {
   '& body': {
     height: '100vh',
     width: '100vw',
-    background: 'linear-gradient(180deg, #FFFFFF 0%, #D4D5E2 100%)',
+    // background: 'linear-gradient(180deg, #FFFFFF 0%, #D4D5E2 100%)',
   },
   '::-webkit-scrollbar': {
     display: 'none',

@@ -10,9 +10,7 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
       <body>
         <MuiProvider>
           <AppBar />
-          <Box component="main" padding={2}>
-            {children}
-          </Box>
+          <Box component="main">{children}</Box>
         </MuiProvider>
       </body>
     </html>

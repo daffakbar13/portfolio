@@ -8,10 +8,20 @@ const useAppBarStore = create<UseAppBarStore>((set) => ({
   constant: AppBarConstant,
   anchorElNav: null,
   anchorElUser: null,
-  handleCloseNavMenu() {
-    set({
-      anchorElNav: null,
-    })
+  handleCloseNavMenu(page) {
+    const section = document.getElementById(page)
+    if (section) {
+      window.scroll({
+        top: section.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+
+    return () => {
+      set({
+        anchorElNav: null,
+      })
+    }
   },
   handleCloseUserMenu() {
     set({

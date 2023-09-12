@@ -10,6 +10,9 @@ export const theme = createTheme({
     primary: { main: '#0F2C59' },
     error: { main: red[900] },
     text: { primary: grey[900] },
+    background: {
+      default: '#f5fbff',
+    },
   },
   shape: { borderRadius: 8 },
   components: {
