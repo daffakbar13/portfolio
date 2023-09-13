@@ -26,11 +26,11 @@ export namespace PageHomeConstant {
     'Website is currently under development. Developer are busy for now...'
 
   /**
-   * @description I'm Software Engineer especialy on Javacript Developer with 3 years experience.
+   * @description I'm Software Engineer especialy on Javacript Developer with 3 years of experience.
    * Focusing on React Js, Node Js and other framework with Javascript or Typescript.
    */
   export const BIO_DESCRIPTION =
-    "I'm Senior Software Engineer especialy on Javacript Developer with 3 years experience. Focusing on React Js, Node Js and other framework with Javascript or Typescript."
+    "I'm Senior Software Engineer especialy on Javacript Developer with 3 years of experience. Focusing on React Js, Node Js and other framework with Javascript or Typescript."
 
   /** @description Hello, Everyone! */
   export const HELLO_EVERYONE = 'Hello, Everyone!'
@@ -48,26 +48,9 @@ export namespace PageHomeConstant {
   export const CV_FILE_NAME = 'Resume_Daffa.pdf'
 
   /**
-    @description [
-      ICNodejs,
-      ICReact,
-      ICExpress,
-      ICNest,
-      ICNextjs,
-      ICMysql,
-      ICPostgresql,
-      ICMongodb,
-      ICDocker,
-      ICKubernetes,
-      ICAws,
-      ICFirebase,
-      ICConfluence,
-      ICRedis,
-      ICRabbitmq,
-      ICKafka,
-      ICGithub,
-      ICGitlab,
-    ]
+    @description [ICNodejs, ICReact, ICExpress, ICNest, ICNextjs, ICMysql, ICPostgresql, ICMongodb,
+    ICDocker, ICKubernetes, ICAws, ICFirebase, ICConfluence, ICRedis, ICRabbitmq, ICKafka, ICGithub,
+    ICGitlab]
    */
   export const SERVICE_LOGOS = [
     // Programming
@@ -98,5 +81,9 @@ export namespace PageHomeConstant {
     ICGitlab,
   ]
 
+  /** @description About */
+  export const ABOUT = 'About'
+
+  /** @description Services */
   export const SERVICES = 'Services'
 }

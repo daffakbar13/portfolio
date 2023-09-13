@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "next dev -p 1009",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 1009",
     "lint": "next lint",
     "fix": "prettier --write . && eslint --fix --ext .js,.ts,.tsx ."
   },
@@ -22,10 +22,13 @@
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "detector-js": "^2.0.11",
+    "device-detector-js": "^3.0.3",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "react": "18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.0",
     "typescript": "5.2.2",

@@ -11,7 +11,7 @@ interface UseAppBarState {
 interface UseAppBarAction {
   handleOpenNavMenu: (e: React.MouseEvent<HTMLElement>) => void
   handleOpenUserMenu: (e: React.MouseEvent<HTMLElement>) => void
-  handleCloseNavMenu: (page: string) => () => void
+  handleCloseNavMenu: (page?: string) => () => void
   handleCloseUserMenu: () => void
 }
 

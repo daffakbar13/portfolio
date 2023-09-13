@@ -32,7 +32,7 @@ const AppBar: React.FC = () => {
 
   return (
     <HideOnScroll>
-      <AppBarMui position="sticky">
+      <AppBarMui id={constant.APP_BAR} position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -61,7 +61,7 @@ const AppBar: React.FC = () => {
                   horizontal: 'left',
                 }}
                 open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
+                onClose={handleCloseNavMenu()}
                 sx={{
                   display: { xs: 'block', md: 'none' },
                 }}

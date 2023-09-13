@@ -7,4 +7,6 @@ export namespace AppBarConstant {
 
   /** @description Open settings */
   export const SETTING_TOOLTIP_TITLE = 'Open settings'
+
+  export const APP_BAR = 'AppBar'
 }

@@ -14,9 +14,61 @@ const Page: NextPage = () => {
   // return <>{constant.MAINTENANCE_TEXT}</>
 
   return (
-    <Stack spacing={4} paddingY={isLaptop ? 16 : 8} paddingX={isLaptop ? 24 : 2}>
+    <Stack spacing={4} paddingX={isLaptop ? 24 : 2}>
       <SectionAbout />
       <SectionService />
+      <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
     </Stack>
   )
 }
