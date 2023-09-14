@@ -25,13 +25,14 @@ export async function getTmpFile(
 ) {
   try {
     const filePath = await getTmpFilePath(fileName)
-    const result = readFile(filePath, options)
+    const result = await readFile(filePath, options)
     return result
   } catch (error) {
     const prodFilePath = await getTmpFilePath(fileName)
     const localFilePath = await getTmpFilePath(fileName, true)
-    await writeFile(prodFilePath, localFilePath)
-    const result = readFile(prodFilePath, options)
+    const localFile = await readFile(localFilePath, options)
+    await writeFile(prodFilePath, localFile)
+    const result = await readFile(prodFilePath, options)
     return result
   }
 }
