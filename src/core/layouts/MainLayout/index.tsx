@@ -1,5 +1,5 @@
 import { AppBar } from '@daffa/lib/components'
-import { MuiProvider } from '@daffa/core/providers'
+import { MuiProvider, ReactQueryProvider } from '@daffa/core/providers'
 import Box from '@mui/material/Box'
 import { MainLayoutProps } from './types'
 
@@ -9,8 +9,10 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
     <html lang="en">
       <body>
         <MuiProvider>
-          <AppBar />
-          <Box component="main">{children}</Box>
+          <ReactQueryProvider>
+            <AppBar />
+            <Box component="main">{children}</Box>
+          </ReactQueryProvider>
         </MuiProvider>
       </body>
     </html>

@@ -6,19 +6,27 @@ type ResponseData = {
   message: string
 }
 
-export async function GET(req: NextRequest) {
-  function getFilePath() {
-    const fileName = '/logs.json'
-    const directory = '/tmp/json'
-    if (process.env.NODE_ENV === 'development') {
-      mkdir(path.join(process.cwd(), directory), { recursive: true })
-      return path.join(process.cwd(), directory, fileName)
-    }
-    mkdir(directory, { recursive: true })
-    return directory + fileName
+async function getFilePath() {
+  const directories: string[] = []
+  if (process.env.NODE_ENV === 'development') {
+    directories.push(process.cwd())
   }
-  const filePath = getFilePath()
-  await writeFile(filePath, JSON.stringify({ message: req.nextUrl.searchParams.get('text') }))
+  directories.push('/tmp/json')
+  const directory = path.join(...directories)
+  await mkdir(directory, { recursive: true })
+  return path.join(directory, '/logs.json')
+}
+
+export async function GET() {
+  const filePath = await getFilePath()
   const data = await readFile(filePath, { encoding: 'utf8' })
-  return NextResponse.json<ResponseData>({ ...JSON.parse(data), ...{ filePath } }, { status: 200 })
+  return NextResponse.json<ResponseData>({ ...JSON.parse(data), filePath }, { status: 200 })
+}
+
+export async function POST(req: NextRequest) {
+  const body = await req.json()
+  const filePath = await getFilePath()
+  await writeFile(filePath, JSON.stringify(body))
+  const data = await readFile(filePath, { encoding: 'utf8' })
+  return NextResponse.json<ResponseData>({ ...JSON.parse(data), filePath }, { status: 200 })
 }

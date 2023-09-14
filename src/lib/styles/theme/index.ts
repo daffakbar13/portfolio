@@ -52,16 +52,5 @@ export const theme = createTheme({
         },
       },
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          borderRadius: 30,
-          padding: '8px 20px',
-        },
-        input: {
-          padding: 0,
-        },
-      },
-    },
   },
 })
