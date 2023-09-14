@@ -12,7 +12,7 @@ export namespace ProfileUsecase {
       const result: ProfileDto.Profile = JSON.parse(data)
       return Response.SendResponse(HttpStatusCode.Ok, result)
     } catch (err) {
-      return Response.SendResponse(HttpStatusCode.InternalServerError)
+      return Response.SendResponse(HttpStatusCode.InternalServerError, err as any)
     }
   }
 
