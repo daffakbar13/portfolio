@@ -1,6 +1,6 @@
 import { Abortable } from 'events'
 import { OpenMode } from 'fs'
-import { copyFile, mkdir, readFile } from 'fs/promises'
+import { mkdir, readFile, writeFile } from 'fs/promises'
 import path from 'path'
 
 export async function getTmpFilePath(fileName: string, isLocal: boolean = false) {
@@ -30,7 +30,7 @@ export async function getTmpFile(
   } catch (error) {
     const prodFilePath = await getTmpFilePath(fileName)
     const localFilePath = await getTmpFilePath(fileName, true)
-    await copyFile(localFilePath, prodFilePath)
+    await writeFile(prodFilePath, localFilePath)
     const result = readFile(prodFilePath, options)
     return result
   }
